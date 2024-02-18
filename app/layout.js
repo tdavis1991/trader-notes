@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "./(components)/Nav";
+import Provider from "./(components)/Provider";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,9 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="w-full h-screen flex flex-col justify-center items-center">
-        <Nav />
-        {children}
+      <body className="w-full h-screen max-h-screen flex flex-col justify-center items-center">
+        <Provider>
+          <Nav />
+          <div className="flex-grow overflow-y-auto text-default-text">
+            {children}
+          </div>
+        </Provider>
       </body>
     </html>
   );

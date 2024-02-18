@@ -1,6 +1,6 @@
 import mongoose, { Schema, model, models } from "mongoose";
 
-const traderSchema = new Schema({
+const TradeSchema = new Schema({
   symbol: {
     type: String,
     required: true,
@@ -24,6 +24,6 @@ const traderSchema = new Schema({
   },
 });
 
-const Trade = models.Trade || model("trade", tradeSchema);
+const Trade = models.Trade || model("trade", TradeSchema);
 
 export default Trade;
