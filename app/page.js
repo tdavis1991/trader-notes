@@ -9,17 +9,12 @@ const Home = () => {
   const router = useRouter();
   console.log("HOME SESSION:", session);
 
-  const handleClick = () => {
-    router.push("/api/auth/signin");
-  };
-
   return (
-    <div>
+    <div className="w-full flex items-center">
       {!session?.user ? (
-        <div>
+        <div className="w-full flex flex-col justify-center items-center">
           <h1>Welcome to Trade Logix</h1>
           <p>Please sign in to access the site</p>
-          <button onClick={handleClick}>Sign In</button>
         </div>
       ) : (
         <div>
