@@ -19,7 +19,12 @@ const UserSchema = new Schema({
   avatar: {
     type: String,
   },
-  trades: [Trade],
+  trades: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Trade'
+    }
+  ],
 });
 
 const User = models.User || model("User", UserSchema);

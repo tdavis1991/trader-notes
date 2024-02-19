@@ -24,6 +24,6 @@ const TradeSchema = new Schema({
   },
 });
 
-const Trade = models.Trade || model("trade", TradeSchema);
+const Trade = models.Trade || model("Trade", TradeSchema);
 
 export default Trade;

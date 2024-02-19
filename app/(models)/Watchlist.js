@@ -9,6 +9,10 @@ const WatchlistSchema = new Schema({
     type: String,
     required: true,
   },
+  watchlistType: {
+    type: String,
+    required: true
+  },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
