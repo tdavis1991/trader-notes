@@ -1,4 +1,5 @@
 import mongoose, { Schema, model, models } from "mongoose";
+import Trade from "./Trade";
 
 const UserSchema = new Schema({
   email: {
@@ -18,6 +19,7 @@ const UserSchema = new Schema({
   avatar: {
     type: String,
   },
+  trades: [Trade],
 });
 
 const User = models.User || model("User", UserSchema);

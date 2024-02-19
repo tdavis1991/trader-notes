@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="w-full flex items-center">
       {!session?.user ? (
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="w-full flex flex-col justify-center items-center text-white">
           <h1>Welcome to Trade Logix</h1>
           <p>Please sign in to access the site</p>
         </div>
