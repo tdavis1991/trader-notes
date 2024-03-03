@@ -13,9 +13,7 @@ export default function RootLayout({ children }) {
       <body className="w-full h-screen max-h-screen flex flex-col justify-center items-center primary-bg-black">
         <Provider>
           <Nav />
-          <div className="flex-grow overflow-y-auto text-default-text">
-            {children}
-          </div>
+          <div className="flex-grow text-default-text">{children}</div>
         </Provider>
       </body>
     </html>

@@ -22,6 +22,14 @@ const TradeSchema = new Schema({
   notes: {
     type: String,
   },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 const Trade = models.Trade || model("Trade", TradeSchema);

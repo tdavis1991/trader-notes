@@ -8,7 +8,7 @@ import Image from "next/image";
 const Nav = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
-  console.log('NAV SESSION', session)
+  console.log("NAV SESSION", session);
 
   const handleClick = () => {
     router.push("/api/auth/signin");
@@ -16,7 +16,6 @@ const Nav = () => {
 
   return (
     <div className="nav-bg py-2 sticky top-0 z-50 w-full flex items-center justify-center text-white">
-
       {session?.user ? (
         <div className="w-full mx-2 flex justify-between items-center">
           <h2>Trade Logix</h2>
@@ -34,15 +33,14 @@ const Nav = () => {
               className="rounded-full"
             />
           </div>
-
         </div>
-
       ) : (
-        <div className="flex w-full justify-between">
+        <div className="flex w-full mx-2 justify-between">
           <h2>Trade Logix</h2>
-          <button className="btn-cta" onClick={handleClick}>Sign In</button>
+          <button className="btn-cta" onClick={handleClick}>
+            Sign In
+          </button>
         </div>
-
       )}
     </div>
   );
