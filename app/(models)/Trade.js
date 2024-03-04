@@ -5,19 +5,18 @@ const TradeSchema = new Schema({
     type: String,
     required: true,
   },
-  profitPercent: {
+  profitOrLostPercent: {
     type: Number,
   },
-  lossPercent: {
-    type: Number,
+  profitOrLost: {
+    type: String,
+    required: true,
   },
   actionableSignal: {
     type: String,
-    required: true,
   },
-  news: {
-    type: String,
-    required: true,
+  ftfc: {
+    type: Boolean,
   },
   notes: {
     type: String,
